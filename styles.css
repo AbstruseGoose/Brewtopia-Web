@@ -209,6 +209,25 @@ strong {
     width: 100%;
 }
 
+.nav-order-btn {
+    background: var(--gold-primary) !important;
+    color: var(--coffee-dark) !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    transition: var(--transition) !important;
+}
+
+.nav-order-btn::after {
+    display: none !important;
+}
+
+.nav-order-btn:hover {
+    background: var(--gold-bright) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -392,6 +411,23 @@ strong {
     box-shadow: var(--shadow-md);
 }
 
+.btn-tertiary {
+    background: transparent;
+    color: var(--coffee-medium);
+    border-color: var(--coffee-medium);
+}
+
+.btn-tertiary:hover {
+    background: var(--coffee-dark);
+    color: var(--cream);
+    border-color: var(--coffee-dark);
+}
+
+.btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+}
+
 /* Seasonal Section */
 .seasonal-section {
     padding: var(--spacing-xxl) 0;
@@ -486,6 +522,10 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.drink-image.lotus {
+    background: linear-gradient(135deg, #FF6B9D 0%, #C06C84 50%, var(--gold-light) 100%);
 }
 
 .drink-badge {
@@ -610,6 +650,85 @@ strong {
     font-style: italic;
     color: var(--sage-light);
     margin-top: var(--spacing-md);
+}
+
+/* Order Online Section */
+.order-online {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--cream) 100%);
+}
+
+.order-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.order-text h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.order-text p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+}
+
+.order-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.order-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--sage-primary);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.order-image {
+    height: 450px;
+    background: linear-gradient(135deg, var(--coffee-medium) 0%, var(--coffee-dark) 100%);
+    border-radius: 30px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    padding: 1.5rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--gold-primary);
+    font-family: var(--font-heading);
 }
 
 /* About Section */
@@ -905,6 +1024,14 @@ strong {
     
     .bakery-image {
         height: 350px;
+    }
+    
+    .order-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-image {
+        height: 300px;
     }
     
     .about-features {
